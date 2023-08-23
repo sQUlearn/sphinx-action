@@ -12,8 +12,8 @@ RUN apt-get update \
 # Install pandoc
 RUN TEMP_DEB="$(mktemp)" \
     && wget -O "$TEMP_DEB" 'https://github.com/jgm/pandoc/releases/download/3.1.6.2/pandoc-3.1.6.2-1-amd64.deb' \
-    && dpkg -i "$TEMP_DEB"
-RUN rm -f "$TEMP_DEB"
+    && dpkg -i "$TEMP_DEB" \
+    && rm -f "$TEMP_DEB"
 
 ADD entrypoint.py /entrypoint.py
 ADD sphinx_action /sphinx_action
