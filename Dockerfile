@@ -1,4 +1,4 @@
-FROM sphinxdoc/sphinx:latest
+FROM sphinxdoc/sphinx:8.0.2
 LABEL "maintainer"="Moritz Willmann <moritz.willmann@ipa.fraunhofer.de>"
 
 RUN apt-get update \
